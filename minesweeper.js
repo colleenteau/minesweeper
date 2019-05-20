@@ -8,55 +8,114 @@ document.addEventListener('DOMContentLoaded', startGame)
         row: 0,
         col: 0,
         isMine: false,
-        hidden: true
+        hidden: true,
+        surroundingMines: 1
       },
       { 
         row: 0,
         col: 1,
         isMine: false,
-        hidden: true
+        hidden: true,
+        surroundingMines: 2
       },
       { 
         row: 0,
         col: 2,
         isMine: true,
-        hidden: true
+        hidden: true,
+        surroundingMines: 0
+      },
+      { 
+        row: 0,
+        col: 3,
+        isMine: false,
+        hidden: true,
+        surroundingMines: 2
       },
       {
         row: 1,
         col: 0,
-        isMine: false,
-        hidden: true
+        isMine: true,
+        hidden: true,
+        surroundingMines: 0
       },
       { 
         row: 1,
         col: 1,
-        isMine: true,
-        hidden: true
+        isMine: false,
+        hidden: true,
+        surroundingMines: 2
       },
       { 
         row: 1,
         col: 2,
         isMine: false,
-        hidden: true
+        hidden: true,
+        surroundingMines: 3
+      },
+      { 
+        row: 1,
+        col: 3,
+        isMine: true,
+        hidden: true,
+        surroundingMines: 0
       },
       {
         row: 2,
         col: 0,
         isMine: false,
-        hidden: true
+        hidden: true,
+        surroundingMines: 2
       },
       { 
         row: 2,
         col: 1,
         isMine: false,
-        hidden: true
+        hidden: true,
+        surroundingMines: 2
       },
       { 
         row: 2,
         col: 2,
+        isMine: false,
+        hidden: true,
+        surroundingMines: 4
+      },
+      { 
+        row: 2,
+        col: 3,
         isMine: true,
-        hidden: true
+        hidden: true,
+        surroundingMines: 0
+      },
+      { 
+        row: 3,
+        col: 0,
+        isMine: true,
+        hidden: true,
+        surroundingMines: 0
+
+      },
+      { 
+        row: 3,
+        col: 1,
+        isMine: false,
+        hidden: true,
+        surroundingMines: 2
+      },
+      { 
+        row: 3,
+        col: 2,
+        isMine: true,
+        hidden: true,
+        surroundingMines: 0
+      },
+      { 
+        row: 3,
+        col: 3,
+        isMine: true,
+        hidden: true,
+        surroundingMines: 0
       }
     ]
   }
@@ -82,7 +141,7 @@ function checkForWin () {
 
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
-  //   lib.displayMessage('You win!')
+ lib.displayMessage('You win!')
 }
 
 // Define this function to count the number of mines around the cell
